@@ -51,6 +51,22 @@ Refer to technology-specific instruction files:
 - Use props for configuration, not duplication
 - Document component APIs with TypeScript types
 
+## Commenting & Documentation Standards
+
+- Comment the reasoning behind non-obvious code, not the mechanics the code already describes.
+- Prefer comments that explain why a branch, workaround, or decision exists, especially for edge cases, compatibility constraints, or business rules.
+- Remove comments that merely restate the next line of code or repeat names already visible in the implementation.
+- Treat stale comments as bugs: update or delete them in the same change that touches the related logic.
+- Use TSDoc/JSDoc for exported functions and helpers in `db/` and `src/lib/`, and document the purpose, parameters, and return values.
+- For reusable `.astro` components, document the `Props` contract so the API is self-explanatory for other contributors and Copilot.
+
+## TypeScript Formatting Standards
+
+- Prefer explicit TypeScript types on exported functions, helper parameters, and component props.
+- Use semicolons at the end of statements and single quotes for string literals unless the surrounding code clearly requires otherwise.
+- Keep logic readable and avoid redundant comments; if a comment is needed, it must add intent or context that would not be obvious from reading the code.
+- The repository's ESLint config enforces the recommended TypeScript and Astro rules, plus the no-unused-vars guard, so common correctness issues are caught automatically.
+
 ## Development Workflow
 
 1. **Choose the right tool**: 
