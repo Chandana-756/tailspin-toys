@@ -52,3 +52,9 @@ ALL UI components MUST use dark theme colors:
 - Smooth transitions: `transition-all duration-200 ease-in-out`
 - Shadows for depth: `shadow-md`, `shadow-lg`, `shadow-xl`
 - Focus states for accessibility: `focus:ring-2 focus:ring-blue-500`
+
+## TypeScript Formatting Conventions
+
+- Prefer explicit types on helper parameters, component props, and exported functions.
+- Keep formatting consistent with the project-wide TypeScript and Astro lint rules so code reviews focus on logic rather than style drift.
+- Use comments only when they explain intent, constraints, or a non-obvious decision; avoid restating the code itself.
